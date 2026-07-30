@@ -3,112 +3,137 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Untuk Kamu ❤️</title>
+<title>Maaf Ya ❤️</title>
 
 <style>
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
 }
 
 body{
-    background:linear-gradient(135deg,#ff758c,#ff7eb3);
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    min-height:100vh;
-    color:#fff;
-    overflow:hidden;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#ff758c,#ff7eb3);
+overflow:hidden;
 }
 
-.container{
-    background:rgba(255,255,255,.12);
-    backdrop-filter:blur(10px);
-    padding:35px;
-    width:90%;
-    max-width:600px;
-    border-radius:20px;
-    text-align:center;
-    box-shadow:0 10px 25px rgba(0,0,0,.25);
+.card{
+background:rgba(255,255,255,.15);
+backdrop-filter:blur(15px);
+padding:35px;
+width:90%;
+max-width:500px;
+border-radius:20px;
+text-align:center;
+color:#fff;
+box-shadow:0 10px 25px rgba(0,0,0,.2);
 }
 
 h1{
-    margin-bottom:20px;
-    font-size:2.3rem;
+font-size:40px;
+margin-bottom:15px;
 }
 
 p{
-    line-height:1.7;
-    margin-bottom:20px;
+line-height:1.7;
+margin:20px 0;
 }
 
 button{
-    border:none;
-    padding:14px 28px;
-    margin:10px;
-    border-radius:50px;
-    font-size:16px;
-    cursor:pointer;
-    transition:.3s;
+padding:14px 30px;
+border:none;
+border-radius:30px;
+font-size:17px;
+cursor:pointer;
+background:white;
+color:#ff3b6b;
+font-weight:bold;
+transition:.3s;
 }
 
-#yes{
-    background:#ff2d55;
-    color:white;
+button:hover{
+transform:scale(1.05);
 }
 
-#yes:hover{
-    transform:scale(1.08);
-}
-
-#no{
-    background:white;
-    color:#ff2d55;
-    position:relative;
-}
-
-#result{
-    margin-top:25px;
-    font-size:20px;
-    font-weight:bold;
-}
-
-.hidden{
-    display:none;
+#pesan{
+display:none;
+margin-top:25px;
+font-size:18px;
 }
 
 .heart{
-    position:absolute;
-    color:white;
-    font-size:20px;
-    animation:float 5s linear infinite;
+position:absolute;
+color:white;
+animation:fall linear infinite;
 }
 
-@keyframes float{
-    from{
-        transform:translateY(100vh);
-        opacity:1;
-    }
-    to{
-        transform:translateY(-100px);
-        opacity:0;
-    }
+@keyframes fall{
+0%{
+transform:translateY(-50px);
+opacity:1;
+}
+100%{
+transform:translateY(110vh);
+opacity:0;
+}
 }
 </style>
 </head>
 
 <body>
 
-<div class="container">
-
-<div id="page1">
-<h1>Hai, Kamu ❤️</h1>
+<div class="card">
+<h1>Maaf ❤️</h1>
 
 <p>
-Kalau kamu lagi baca halaman ini,
-berarti akhirnya aku berhasil ngumpulin keberanian
+Aku tahu aku sudah membuatmu kecewa.
+Aku benar-benar menyesal atas semua yang terjadi.
+Aku tidak meminta semuanya langsung kembali seperti semula.
+Aku hanya ingin meminta maaf dengan tulus.
+</p>
+
+<button onclick="showMessage()">Buka Hatiku</button>
+
+<div id="pesan">
+<p>
+Terima kasih sudah membaca sampai akhir.
+Aku akan berusaha menjadi pribadi yang lebih baik.
+Kalau suatu hari nanti kamu bisa memaafkanku,
+itu akan menjadi hadiah terindah bagiku. ❤️
+</p>
+</div>
+
+</div>
+
+<script>
+
+function showMessage(){
+document.getElementById("pesan").style.display="block";
+
+for(let i=0;i<60;i++){
+let h=document.createElement("div");
+h.className="heart";
+h.innerHTML="❤";
+h.style.left=Math.random()*100+"vw";
+h.style.fontSize=(Math.random()*20+15)+"px";
+h.style.animationDuration=(Math.random()*3+2)+"s";
+document.body.appendChild(h);
+
+setTimeout(()=>{
+h.remove();
+},5000);
+}
+}
+
+</script>
+
+</body>
+</html>berarti akhirnya aku berhasil ngumpulin keberanian
 buat jujur sama kamu...
 </p>
 
